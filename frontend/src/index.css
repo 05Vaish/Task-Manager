@@ -1,17 +1,59 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
-:root {
-  --font-display: "Poppins", sans-serif;
-  --color-primary: #2172f0;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
 }
 
-@layer base {
-  html {
-    font-family: var(--font-display);
-  }
+/* Navbar */
+.navbar {
+  background-color: #1e293b;
+  padding: 15px;
+  color: white;
+}
 
-  body {
-    background-color: #ffffff;
-  }
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Button */
+button {
+  padding: 8px 14px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Input */
+input {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }

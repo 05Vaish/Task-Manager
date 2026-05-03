@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const manage users = () => {
+const ManageUsers = () => {
   return (
-    <div>manage users</div>
-  )
-}
+    <div>
+      <h1>Manage Users Page</h1>
+    </div>
+  );
+};
 
-export default manage users
+export default ManageUsers;

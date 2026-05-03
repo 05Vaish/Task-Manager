@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const TaskDetails = () => {
-  return (
-    <div>TaskDetails</div>
-  )
-}
+  const { id } = useParams();
 
-export default TaskDetails
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Task Details</h1>
+      <p>Task ID: {id}</p>
+    </div>
+  );
+};
+
+export default TaskDetails;

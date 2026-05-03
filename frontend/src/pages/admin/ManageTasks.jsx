@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const manage task = () => {
+const ManageTasks = () => {
   return (
-    <div>manage task</div>
-  )
-}
+    <div>
+      <h1>Manage Tasks Page</h1>
+    </div>
+  );
+};
 
-export default manage task
+export default ManageTasks;
