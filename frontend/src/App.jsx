@@ -2,10 +2,11 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>Task Manager
+    <div className="text-primary">Task Manager
       
     </div>
-  )
-}
+  );
 
-export default App
+};
+
+export default App;
