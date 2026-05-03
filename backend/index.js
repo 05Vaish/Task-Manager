@@ -1,20 +1,34 @@
-import express from "express"
-import cors from "cors"
-import dotenv from "dotenv"
-dotenv.config()
-const app = express()
-//middleware cors
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+
+dotenv.config();
+
+// Connect to MongoDB
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("Database is connected");
+  })
+  .catch((err) => {
+    console.log("DB Error:", err);
+  });
+
+const app = express();
+
+// Middleware
 app.use(
+  cors({
+    origin: process.env.FRONT_END_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
-cors({
+app.use(express.json());
 
-origin: process.env.FRONT_END_URL,
-methods: ["GET", "POST", "PUT", "DELETE"],
- allowedHeaders: ["Content-Type", "Authorization"],
- })
-)
-//middlewafre json in req body
-app.use(express.json())
-app.listen(3000, () =>{
-    console.log("server is running on port 3000!")
-})
+// Server
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
+});
